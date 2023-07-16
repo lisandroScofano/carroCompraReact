@@ -1,7 +1,15 @@
+import { useNavigate } from "react-router-dom";
+
 export const ProductCardView = ({ handler, id, name, description, price }) => {
+
+    const navigate = useNavigate();
+
     const onAddProduct = (product) => {
+        console.log(product);
         handler(product);
+        navigate('/cart');
     }
+    
     return (
         <>
             <div className="card">

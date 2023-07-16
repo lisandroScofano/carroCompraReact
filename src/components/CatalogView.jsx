@@ -6,9 +6,10 @@ export const CatalogView = ({ handler }) => {
 
     const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        setProducts(getProducts());
-    }, []);
+    useEffect(
+        () => {
+            setProducts(getProducts());
+        }, []);
 
     return (
         <>
